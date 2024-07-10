@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest Heart Rate Data</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Latest 2-Hour Heart Rate Data</h1>
+    <p>Minimum Heart Rate: {{ min_hr }}</p>
+    <p>Maximum Heart Rate: {{ max_hr }}</p>
+    <p>Average Heart Rate: {{ avg_hr }}</p>
+    <div id="plot">{{ plot_html|safe }}</div>
+    <script>
+        var plot_data = document.getElementById('plot').innerHTML;
+        Plotly.newPlot('plot', plot_data, {});
+    </script>
+</body>
+</html>

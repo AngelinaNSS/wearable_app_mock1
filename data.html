@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valid 2-Hour Intervals</title>
+</head>
+<body>
+    <h1>Valid 2-Hour Intervals</h1>
+    <ul>
+        {% for interval in intervals %}
+            <li>{{ interval[0] }} to {{ interval[1] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
